@@ -14,11 +14,3 @@
 /backup*
 
 wp-includes/
-
-!wp-content/themes/ei/
-!wp-content/themes/ei-child/
-
-!wp-content/plugins/realty-export
-
-# Frontend tools
-wp-content/themes/ei-child/node_modules/
