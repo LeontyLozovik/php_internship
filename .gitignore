@@ -4,6 +4,7 @@
 # WordPress
 
 wp-includes/*
+wp-*
 
 
 
