@@ -113,7 +113,7 @@ jQuery( function ( $ ) {
 				mshotTries = 1;
 			}
 
-			var mShot = $( '<div class="akismet-mshot mshot-container"><div class="mshot-arrow"></div><img src="' + akismet_mshot_url( linkUrl, mshotTries ) + '" width="450" height="338" class="mshot-image" /></div>' );
+			var mShot = $( '<div class="akismet-mshot mshot-container"><div class="mshot-arrow"></div><images src="' + akismet_mshot_url( linkUrl, mshotTries ) + '" width="450" height="338" class="mshot-image" /></div>' );
 			mShot.data( 'link', this );
 			mShot.data( 'url', linkUrl );
 
@@ -160,7 +160,7 @@ jQuery( function ( $ ) {
 	function retryMshotUntilLoaded() {
 		clearTimeout( mshotRetryTimer );
 
-		var imageWidth = $( '.akismet-mshot img' ).get(0).naturalWidth;
+		var imageWidth = $( '.akismet-mshot images' ).get(0).naturalWidth;
 
 		if ( imageWidth == 0 ) {
 			// It hasn't finished loading yet the first time. Check again shortly.
