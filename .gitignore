@@ -7,7 +7,7 @@ wp-includes/*
 wp-*
 
 !wp-content/
-!wp-admin
+!wp-admin/
 
 # ignore all files starting with . or ~
 .*
@@ -50,6 +50,6 @@ Thumbs.db
 
 xmlrpc.php
 readme.html
-README.md
+!.gitignore
 
 
