@@ -4,7 +4,6 @@
 # WordPress
 
 wp-includes/*
-wp-*
 
 !wp-content/
 !wp-admin/

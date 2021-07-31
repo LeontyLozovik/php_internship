@@ -40,7 +40,7 @@
         <img src="<?php bloginfo('template_directory') ?>/images/label.jpg" width="100%">
     </div>
 
-    <div>
+    <div class="indent">
         <h1 class="headers boldtext">TREND WATCHES</h1>
     </div>
 
@@ -92,7 +92,7 @@
         </div>
     </div>
 
-    <div>
+    <div class="indent">
         <h1 class="headers boldtext">CHOOSE YOUR WATCH</h1>
     </div>
 
@@ -154,7 +154,7 @@
         </div>
     </div>
 
-    <div>
+    <div class="indent">
         <h1 class="headers boldtext">POPULAR WATCHES</h1>
     </div>
 
