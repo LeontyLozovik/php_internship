@@ -1,13 +1,6 @@
 # PHPStorm
 .idea
 
-# WordPress
-
-wp-includes/*
-
-!wp-content/
-!wp-admin/
-
 # ignore all files starting with . or ~
 .*
 ~*
