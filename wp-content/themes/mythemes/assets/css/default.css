@@ -2,22 +2,15 @@ body{
     font-family: "Agency FB" !important;
 }
 
-#logo{
-    color: #9B834D;
-    font-size: x-large;
-    margin: 5px;
-    text-decoration: none;
-}
-
 input{
     padding-bottom: 10px;
     padding-top: 10px;
-    padding-left: 15px;
+
 }
 
 .menu1{
     color: #A6A8AA;
-    font-size: small;
+    font-size: 14px;
     margin: 5px;
     font-weight: bold;
 }
@@ -163,9 +156,20 @@ input{
     margin: 50px;
 }
 
+.little_indent{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
 .indent{
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+.indent_both_sides{
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 .no_indent{
@@ -253,18 +257,285 @@ input{
     border-right: 1px solid #A6A8AA;
 }
 
-.block_80{
-    width: 80% !important;
+.block_5{
+    width: 5% !important;
 }
 
-.block_50{
-    width: 50% !important;
+.block_10{
+    width: 10% !important;
+}
+
+.block_15{
+    width: 15% !important;
+}
+
+.block_20{
+    width: 20% !important;
 }
 
 .block_25{
     width: 25% !important;
 }
 
-.block_20{
-    width: 20% !important;
+.block_30{
+    width: 30% !important;
+}
+
+.block_50{
+    width: 50% !important;
+}
+
+.block_65{
+    width: 65% !important;
+}
+
+.block_75{
+    width: 75% !important;
+}
+
+.block_80{
+    width: 80% !important;
+}
+
+
+
+
+/*-----------------product_list--------------------------*/
+
+
+
+
+.fsize_up{
+    font-size: 19px;
+}
+
+.filter_button{
+    color : #242730;
+    background-color: #F7F7F7;
+    font-weight: 900;
+    border-radius: 0px;
+    border: 1px solid #242730;
+}
+
+.filter_button:hover{
+    color : #F7F7F7;
+    background-color: #9B834D;
+    font-weight: 900;
+    border-radius: 0px;
+    border: 1px solid #9B834D;
+}
+
+.catalog_block{
+    margin-left: 20%;
+    margin-right: 10%;
+    margin-bottom: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.page_button_pasive{
+    color : #242730;
+    border: 1px solid #242730;
+    background-color: #FFFFFF;
+    border-radius: 0px !important;
+
+}
+
+.page_button_pasive:hover{
+    color : #F7F7F7;
+    background-color: #242730;
+}
+
+.page_button_active{
+    color : #F7F7F7;
+    background-color: #242730;
+    border-radius: 0px !important;
+}
+
+.container_catalog{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.allborders{
+    border: 1px solid #A6A8AA;
+}
+
+.all_without_top{
+    border-right: 1px solid #A6A8AA;
+    border-left: 1px solid #A6A8AA;
+    border-bottom: 1px solid #A6A8AA;
+}
+
+.lrborder{
+    border-left: 1px solid #A6A8AA;
+    border-right: 1px solid #A6A8AA;
+}
+
+.indent_top{
+    margin-top: 20px;
+}
+
+.indent_bottom{
+    margin-bottom: 20px;
+}
+
+.chbspan{
+    width: 18px;
+    height: 18px;
+    border: 1px solid #242730;
+    border-radius: 2px;
+}
+
+.chbspan:active{
+    background-image: url("img/galka.jpg");
+    background-size: 100%;
+    border: 1px solid #9B834D;
+}
+
+.check_box{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    padding-left: 25px;
+}
+
+.check_box_style{
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #242730;
+    border-radius: 2px;
+    margin-left: 25px;
+}
+
+.check_box:checked + .check_box_style{
+
+    background-image: url("img/galka.jpg");
+    background-color: #9B834D;
+    background-size: 100%;
+    border: 1px solid #9B834D;
+}
+
+/*-----------------product_list--------------------------*/
+
+
+
+.product_list_indent1{
+    margin-left: 10%;
+    margin-top: 15%;
+    margin-right: 20%;
+}
+
+
+.product_list_indent2{
+    margin-left: 20%;
+    margin-top: 15%;
+    margin-right: 10%;
+}
+
+.big_indent_between{
+    margin-top: 70px;
+}
+
+.horizontal_indent{
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.p_n{
+    font-weight: 700;
+    color: #9B834D;
+}
+
+.p_n:hover{
+    color: #9B834D;
+    text-decoration: none;
+}
+
+.product_nav{
+    font-weight: 700;
+    color: #242730;
+}
+
+.product_nav:hover{
+    color: #9B834D;
+    text-decoration: none;
+}
+
+.rpadding5{
+    padding-right: 5px;
+}
+
+.add_to_wishlist_button{
+    background-color: #FFFFFF;
+    color: #242730;
+    font-weight: 900 !important;
+}
+
+.add_to_wishlist_button:hover{
+    color: #A6A8AA;
+}
+
+.input_number{
+    text-align: center;
+    font-size: 22px;
+    border: none;
+}
+
+.rmargin10{
+    margin-right: 10px;
+    margin-bottom: 0px;
+}
+
+.img_social{
+    color: #A6A8AA;
+    font-weight: bold;
+}
+
+.img_social:hover {
+    color: #9B834D;
+    text-decoration: none;
+}
+
+.paddings{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.paddingtop3{
+    padding-top: 3px;
+}
+
+.fsize_down{
+    font-size: 14px;
+}
+
+.menu_block{
+    padding-right: 30%;
+    padding-left: 30%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.search_block{
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.lindent{
+    margin-left: 10px;
+}
+
+.phone_indent {
+    margin-top: 8px;
 }
