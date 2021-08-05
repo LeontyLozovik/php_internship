@@ -10,6 +10,7 @@
     <!-- Stylesheets
       ============================================= -->
     <?php wp_head(); ?>
+    <?php get_template_part('product_list.php');?>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Document Title
@@ -31,12 +32,12 @@
             <button class="form_shop_button btn btn-outline my-2 my-sm-10">Shop now!</button>
         </div>
         <div class="indent">
-            <img src="<?php bloginfo( 'template_directory'); ?>/images/clock1.jpg" width="100%">
+            <img src="<?php bloginfo('template_directory') ?>/images/clock1.jpg" width="100%">
         </div>
 
     </div>
 
-    <div class="border_bottom">
+    <div>
         <img src="<?php bloginfo('template_directory') ?>/images/label.jpg" width="100%">
     </div>
 
@@ -44,37 +45,37 @@
         <h1 class="headers boldtext">TREND WATCHES</h1>
     </div>
 
-
     <div class="container_media borders">
-        <div class="block_25 rborder container_footer">
-            <img src="<?php bloginfo('template_directory') ?>/images/1.jpg">
-            <div>
+        <div class="block_25 rborder">
+            <a href="" class="menu1 dark container_footer">
+                <img src="<?php bloginfo('template_directory') ?>/images/1.jpg">
                 <p class="center boldtext fsize_up">BOLD ROUND ANALOG GUNMETAL DIAL</p>
                 <p class="center boldtext fsize_up">500$</p>
-            </div>
+            </a>
         </div>
-        <div class="block_25 rborder container_footer">
-            <img src="<?php bloginfo('template_directory') ?>/images/2.jpg">
-            <div>
+        <div class="block_25 rborder">
+            <a href="product_list.php" class="menu1 dark container_footer">
+                <img src="<?php bloginfo('template_directory') ?>/images/2.jpg">
                 <p class="center boldtext fsize_up">DAPPER ROUND ANALOG</p>
                 <p class="center boldtext fsize_up">87$</p>
-            </div>
+            </a>
         </div>
-        <div class="block_25 rborder container_footer">
-            <img src="<?php bloginfo('template_directory') ?>/images/3.jpg">
-            <div>
+        <div class="block_25 rborder">
+            <a href="product_list.php" class="menu1 dark container_footer">
+                <img src="<?php bloginfo('template_directory') ?>/images/3.jpg">
                 <p class="center boldtext fsize_up">ROUND ANALOG WHITE & BEE DIAL LADIES</p>
                 <p class="center boldtext fsize_up">75$</p>
-            </div>
+            </a>
         </div>
-        <div class="block_25 container_footer">
-            <img src="<?php bloginfo('template_directory') ?>/images/4.jpg">
-            <div>
+        <div class="block_25">
+            <a href="product_list.php" class="menu1 dark container_footer">
+                <img src="<?php bloginfo('template_directory') ?>/images/4.jpg">
                 <p class="center boldtext fsize_up">ROUND ANALOG WHITE DIAL LADIES</p>
                 <p class="center boldtext fsize_up">80$</p>
-            </div>
+            </a>
         </div>
     </div>
+
 
     <div class="fontcolor container_for_body center borders">
         <div class="mainpart">
@@ -94,6 +95,37 @@
 
     <div class="indent">
         <h1 class="headers boldtext">CHOOSE YOUR WATCH</h1>
+    </div>
+
+    <div class="container_media borders">
+        <div class="block_25 rborder">
+            <a href="product_list.php" class="menu1 dark container_footer">
+                <img src="<?php bloginfo('template_directory') ?>/images/1.jpg">
+                <p class="center boldtext fsize_up">BOLD ROUND ANALOG GUNMETAL DIAL</p>
+                <p class="center boldtext fsize_up">500$</p>
+            </a>
+        </div>
+        <div class="block_25 rborder">
+            <a href="product_list.php" class="menu1 dark container_footer">
+                <img src="<?php bloginfo('template_directory') ?>/images/2.jpg">
+                <p class="center boldtext fsize_up">DAPPER ROUND ANALOG</p>
+                <p class="center boldtext fsize_up">87$</p>
+            </a>
+        </div>
+        <div class="block_25 rborder">
+            <a href="product_list.php" class="menu1 dark container_footer">
+                <img src="<?php bloginfo('template_directory') ?>/images/3.jpg">
+                <p class="center boldtext fsize_up">ROUND ANALOG WHITE & BEE DIAL LADIES</p>
+                <p class="center boldtext fsize_up">75$</p>
+            </a>
+        </div>
+        <div class="block_25">
+            <a href="product_list.php" class="menu1 dark container_footer">
+                <img src="<?php bloginfo('template_directory') ?>/images/4.jpg">
+                <p class="center boldtext fsize_up">ROUND ANALOG WHITE DIAL LADIES</p>
+                <p class="center boldtext fsize_up">80$</p>
+            </a>
+        </div>
     </div>
 
     <div class="fontcolor container_media borders">
@@ -159,45 +191,50 @@
     </div>
 
     <div class="container_media borders">
-        <div class="block_25 rborder container_footer">
-            <img src="<?php bloginfo('template_directory') ?>/images/1.jpg">
-            <div>
+        <div class="block_25 rborder">
+            <a href="product_list.php" class="menu1 dark container_footer">
+                <img src="<?php bloginfo('template_directory') ?>/images/1.jpg">
                 <p class="center boldtext fsize_up">BOLD ROUND ANALOG GUNMETAL DIAL</p>
                 <p class="center boldtext fsize_up">500$</p>
-            </div>
+            </a>
         </div>
-        <div class="block_25 rborder container_footer">
-            <img src="<?php bloginfo('template_directory') ?>/images/2.jpg">
-            <div>
+        <div class="block_25 rborder">
+            <a href="product_list.php" class="menu1 dark container_footer">
+                <img src="<?php bloginfo('template_directory') ?>/images/2.jpg">
                 <p class="center boldtext fsize_up">DAPPER ROUND ANALOG</p>
                 <p class="center boldtext fsize_up">87$</p>
-            </div>
+            </a>
         </div>
-        <div class="block_25 rborder container_footer">
-            <img src="<?php bloginfo('template_directory') ?>/images/3.jpg">
-            <div>
+        <div class="block_25 rborder">
+            <a href="product_list.php" class="menu1 dark container_footer">
+                <img src="<?php bloginfo('template_directory') ?>/images/3.jpg">
                 <p class="center boldtext fsize_up">ROUND ANALOG WHITE & BEE DIAL LADIES</p>
                 <p class="center boldtext fsize_up">75$</p>
-            </div>
+            </a>
         </div>
-        <div class="block_25 container_footer">
-            <img src="<?php bloginfo('template_directory') ?>/images/4.jpg">
-            <div>
+        <div class="block_25">
+            <a href="product_list.php" class="menu1 dark container_footer">
+                <img src="<?php bloginfo('template_directory') ?>/images/4.jpg">
                 <p class="center boldtext fsize_up">ROUND ANALOG WHITE DIAL LADIES</p>
                 <p class="center boldtext fsize_up">80$</p>
-            </div>
+            </a>
         </div>
     </div>
 
     <?php get_footer(); ?>
 
-<!-- Go To Top
+    <!-- Go To Top
 ============================================= -->
-<div id="gotoTop" class="icon-angle-up"></div>
+    <div id="gotoTop" class="icon-angle-up"></div>
 
-<!-- External JavaScripts
-============================================= -->
+    <!-- External JavaScripts
+    ============================================= -->
 
 </body>
 
 </html>
+
+
+
+
+

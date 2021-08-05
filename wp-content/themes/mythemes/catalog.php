@@ -117,67 +117,67 @@
         <div class="block_75">
             <div class="container_catalog">
                 <div class="block_30 allborders">
-                    <div class="container_footer">
-                        <img src="img/1.jpg" width="100%">
+                    <a href="#" class="menu1 dark container_footer">
+                        <img src="<?php bloginfo('template_directory') ?>/images/1.jpg" width="100%">
                         <h6 class="boldtext center indent_top">BOLD ROUND ANALOG GUNMETAL DIAL</h6>
                         <h6 class="boldtext center indent_bottom">500$</h6>
-                    </div>
+                    </a>
                 </div>
                 <div class="block_30 borders">
-                    <div class="container_footer">
-                        <img src="img/2.jpg" width="100%">
+                    <a href="#" class="menu1 dark container_footer">
+                        <img src="<?php bloginfo('template_directory') ?>/images/2.jpg" width="100%">
                         <h6 class="boldtext center indent_top">DAPPER ROUND ANALOG</h6>
                         <h6 class="boldtext center indent_bottom">87$</h6>
-                    </div>
+                    </a>
                 </div>
                 <div class="block_30 allborders">
-                    <div class="container_footer">
-                        <img src="img/3.jpg" width="100%">
+                    <a href="#" class="menu1 dark container_footer">
+                        <img src="<?php bloginfo('template_directory') ?>/images/3.jpg" width="100%">
                         <h6 class="boldtext center indent_top">ROUND ANALOG WHITE & BEE DIAL LADIES</h6>
                         <h6 class="boldtext center indent_bottom">75$</h6>
-                    </div>
+                    </a>
                 </div>
                 <div class="block_30 all_without_top">
-                    <div class="container_footer">
-                        <img src="img/4.jpg" width="100%">
+                    <a href="#" class="menu1 dark container_footer">
+                        <img src="<?php bloginfo('template_directory') ?>/images/4.jpg" width="100%">
                         <h6 class="boldtext center indent_top">ROUND ANALOG WHITE DIAL LADIES</h6>
                         <h6 class="boldtext center indent_bottom">80$</h6>
-                    </div>
+                    </a>
                 </div>
                 <div class="block_30 border_bottom">
-                    <div class="container_footer">
-                        <img src="img/5.jpg" width="100%">
+                    <a href="#" class="menu1 dark container_footer">
+                        <img src="<?php bloginfo('template_directory') ?>/images/5.jpg" width="100%">
                         <h6 class="boldtext center indent_top">TATUM ROUND ANALOG BLUE DIAL LADIES</h6>
                         <h6 class="boldtext center indent_bottom">87$</h6>
-                    </div>
+                    </a>
                 </div>
                 <div class="block_30 all_without_top">
-                    <div class="container_footer">
-                        <img src="img/6.jpg" width="100%">
+                    <a href="#" class="menu1 dark container_footer">
+                        <img src="<?php bloginfo('template_directory') ?>/images/6.jpg" width="100%">
                         <h6 class="boldtext center indent_top">THE BEDROCK CHRONO</h6>
                         <h6 class="boldtext center indent_bottom">122$</h6>
-                    </div>
+                    </a>
                 </div>
                 <div class="block_30 all_without_top">
-                    <div class="container_footer">
-                        <img src="img/7.jpg" width="100%">
+                    <a href="#" class="menu1 dark container_footer">
+                        <img src="<?php bloginfo('template_directory') ?>/images/7.jpg" width="100%">
                         <h6 class="boldtext center indent_top">THE CANFIELD SPORT</h6>
                         <h6 class="boldtext center indent_bottom">454$</h6>
-                    </div>
+                    </a>
                 </div>
                 <div class="block_30 border_bottom">
-                    <div class="container_footer">
-                        <img src="img/8.jpg" width="100%">
+                    <a href="#" class="menu1 dark container_footer">
+                        <img src="<?php bloginfo('template_directory') ?>/images/8.jpg" width="100%">
                         <h6 class="boldtext center indent_top">THE LAKE MICHIGAN MONSTER</h6>
                         <h6 class="boldtext center indent_bottom">188$</h6>
-                    </div>
+                    </a>
                 </div>
                 <div class="block_30 all_without_top">
-                    <div class="container_footer">
-                        <img src="img/9.jpg" width="100%">
+                    <a href="#" class="menu1 dark container_footer">
+                        <img src="<?php bloginfo('template_directory') ?>/images/9.jpg" width="100%">
                         <h6 class="boldtext center indent_top">THE LAKE MICHIGAN MONSTER</h6>
                         <h6 class="boldtext center indent_bottom">170$</h6>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -185,6 +185,10 @@
 
     <div class="container_reverse indent">
         <div class="container_for_her_and_him center block_75">
+            <?php
+                next_post_link('Next');
+                previous_post_link('Perv');
+            ?>
             <button class="page_button_pasive btn btn-outline my-2 my-sm-10">Prev</button>
             <button class="page_button_active btn btn-outline my-2 my-sm-10">1</button>
             <button class="page_button_pasive btn btn-outline my-2 my-sm-10">2</button>

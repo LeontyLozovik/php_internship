@@ -31,6 +31,22 @@
                 <div>
                     <a href="#" class="menu1">CONTACTS</a>
                 </div>
+
+                <?php
+
+                if(has_nav_menu('primary')){
+                    wp_nav_menu([
+                        'theme_location' => 'primary',
+                        'container'      => false,
+                        'fallback_cd'    => false,
+                        'menu_class'     => 'menu1 grey',
+                        'depth'          => 4
+                    ]);
+                }
+
+                ?>
+
+
             </div>
 
             <div class="container_for_body block_75 lrborder">
@@ -43,7 +59,7 @@
                     <a href="#" class="menu1">+1(800)123-45-67</a>
                 </div>
                 <div class="little_indent">
-                    <a href="#">
+                    <a href="<?php bloginfo('url');?>">
                         <img src="<?php bloginfo('template_directory') ?>/images/watrix.jpg" width="100%">
                     </a>
                 </div>
