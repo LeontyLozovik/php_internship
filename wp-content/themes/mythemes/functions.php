@@ -19,10 +19,10 @@ add_action('after_setup_theme', 'mytheme_add_woocommerce_support');
 function mytheme_add_woocommerce_support(){
     add_theme_support('woocommerce');
 }
-/*
+
 add_action('after_setup_theme', 'my_setup_theme');
 
 function my_setup_theme(){
-    register_nav_menu('primary', __('Primary Menu', 'mythemes'));
+    /*register_nav_menu('primary', __('Primary Menu', 'mythemes'));*/
     add_theme_support('post-thumbnails');
-}*/
+}
