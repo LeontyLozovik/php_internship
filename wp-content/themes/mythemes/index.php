@@ -10,7 +10,6 @@
     <!-- Stylesheets
       ============================================= -->
     <?php wp_head(); ?>
-    <?php get_template_part('product_list.php');?>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Document Title
@@ -46,36 +45,38 @@
     </div>
 
     <div class="container_media borders">
-        <div class="block_25 rborder">
-            <a href="" class="menu1 dark container_footer">
-                <img src="<?php bloginfo('template_directory') ?>/images/1.jpg">
-                <p class="center boldtext fsize_up">BOLD ROUND ANALOG GUNMETAL DIAL</p>
-                <p class="center boldtext fsize_up">500$</p>
-            </a>
-        </div>
-        <div class="block_25 rborder">
-            <a href="product_list.php" class="menu1 dark container_footer">
-                <img src="<?php bloginfo('template_directory') ?>/images/2.jpg">
-                <p class="center boldtext fsize_up">DAPPER ROUND ANALOG</p>
-                <p class="center boldtext fsize_up">87$</p>
-            </a>
-        </div>
-        <div class="block_25 rborder">
-            <a href="product_list.php" class="menu1 dark container_footer">
-                <img src="<?php bloginfo('template_directory') ?>/images/3.jpg">
-                <p class="center boldtext fsize_up">ROUND ANALOG WHITE & BEE DIAL LADIES</p>
-                <p class="center boldtext fsize_up">75$</p>
-            </a>
-        </div>
-        <div class="block_25">
-            <a href="product_list.php" class="menu1 dark container_footer">
-                <img src="<?php bloginfo('template_directory') ?>/images/4.jpg">
-                <p class="center boldtext fsize_up">ROUND ANALOG WHITE DIAL LADIES</p>
-                <p class="center boldtext fsize_up">80$</p>
-            </a>
-        </div>
-    </div>
+        <?php
+            $params = array(
+                'posts_per_page' => 4,
+                'post_type' => 'product'
+            );
+            $wc_query = new WP_Query($params);
 
+            if($wc_query->have_posts()){
+                while ($wc_query->have_posts()){?>
+                    <div class="block_25 rborder container_center">
+                        <?php $wc_query->the_post();?>
+
+                        <a href="<?php the_permalink();?>" class="menu1 dark container_footer">
+                            <?php
+                            $size = array(300, 400);
+                            the_post_thumbnail($size);
+
+                            $product_id = get_the_ID();
+                            $product = wc_get_product( $product_id );?>
+
+                            <p class="center boldtext fsize_up"><?php the_title()?></p>
+                            <p class="center boldtext fsize_up"><?=$product->get_price_html(); ?></p>
+                        </a>
+                    </div>
+                    <?php }
+                    wp_reset_postdata();
+                }
+                else{
+                    _e('No Products');
+                }
+                ?>
+    </div>
 
     <div class="fontcolor container_for_body center borders">
         <div class="mainpart">
@@ -95,37 +96,6 @@
 
     <div class="indent">
         <h1 class="headers boldtext">CHOOSE YOUR WATCH</h1>
-    </div>
-
-    <div class="container_media borders">
-        <div class="block_25 rborder">
-            <a href="product_list.php" class="menu1 dark container_footer">
-                <img src="<?php bloginfo('template_directory') ?>/images/1.jpg">
-                <p class="center boldtext fsize_up">BOLD ROUND ANALOG GUNMETAL DIAL</p>
-                <p class="center boldtext fsize_up">500$</p>
-            </a>
-        </div>
-        <div class="block_25 rborder">
-            <a href="product_list.php" class="menu1 dark container_footer">
-                <img src="<?php bloginfo('template_directory') ?>/images/2.jpg">
-                <p class="center boldtext fsize_up">DAPPER ROUND ANALOG</p>
-                <p class="center boldtext fsize_up">87$</p>
-            </a>
-        </div>
-        <div class="block_25 rborder">
-            <a href="product_list.php" class="menu1 dark container_footer">
-                <img src="<?php bloginfo('template_directory') ?>/images/3.jpg">
-                <p class="center boldtext fsize_up">ROUND ANALOG WHITE & BEE DIAL LADIES</p>
-                <p class="center boldtext fsize_up">75$</p>
-            </a>
-        </div>
-        <div class="block_25">
-            <a href="product_list.php" class="menu1 dark container_footer">
-                <img src="<?php bloginfo('template_directory') ?>/images/4.jpg">
-                <p class="center boldtext fsize_up">ROUND ANALOG WHITE DIAL LADIES</p>
-                <p class="center boldtext fsize_up">80$</p>
-            </a>
-        </div>
     </div>
 
     <div class="fontcolor container_media borders">
@@ -191,34 +161,32 @@
     </div>
 
     <div class="container_media borders">
-        <div class="block_25 rborder">
-            <a href="product_list.php" class="menu1 dark container_footer">
-                <img src="<?php bloginfo('template_directory') ?>/images/1.jpg">
-                <p class="center boldtext fsize_up">BOLD ROUND ANALOG GUNMETAL DIAL</p>
-                <p class="center boldtext fsize_up">500$</p>
-            </a>
-        </div>
-        <div class="block_25 rborder">
-            <a href="product_list.php" class="menu1 dark container_footer">
-                <img src="<?php bloginfo('template_directory') ?>/images/2.jpg">
-                <p class="center boldtext fsize_up">DAPPER ROUND ANALOG</p>
-                <p class="center boldtext fsize_up">87$</p>
-            </a>
-        </div>
-        <div class="block_25 rborder">
-            <a href="product_list.php" class="menu1 dark container_footer">
-                <img src="<?php bloginfo('template_directory') ?>/images/3.jpg">
-                <p class="center boldtext fsize_up">ROUND ANALOG WHITE & BEE DIAL LADIES</p>
-                <p class="center boldtext fsize_up">75$</p>
-            </a>
-        </div>
-        <div class="block_25">
-            <a href="product_list.php" class="menu1 dark container_footer">
-                <img src="<?php bloginfo('template_directory') ?>/images/4.jpg">
-                <p class="center boldtext fsize_up">ROUND ANALOG WHITE DIAL LADIES</p>
-                <p class="center boldtext fsize_up">80$</p>
-            </a>
-        </div>
+        <?php
+
+        if($wc_query->have_posts()){
+            while ($wc_query->have_posts()){?>
+                <div class="block_25 rborder container_center">
+                    <?php $wc_query->the_post();?>
+
+                    <a href="<?php the_permalink();?>" class="menu1 dark container_footer">
+                        <?php
+                        $size = array(300, 400);
+                        the_post_thumbnail($size);
+
+                        $product_id = get_the_ID();
+                        $product = wc_get_product( $product_id );?>
+
+                        <p class="center boldtext fsize_up"><?php the_title()?></p>
+                        <p class="center boldtext fsize_up"><?=$product->get_price_html(); ?></p>
+                    </a>
+                </div>
+            <?php }
+            wp_reset_postdata();
+        }
+        else{
+            _e('No Products');
+        }
+        ?>
     </div>
 
     <?php get_footer(); ?>
@@ -233,8 +201,3 @@
 </body>
 
 </html>
-
-
-
-
-

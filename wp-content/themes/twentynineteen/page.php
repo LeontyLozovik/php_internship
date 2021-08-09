@@ -18,20 +18,16 @@ get_header();
             <?php get_template('content-product_list'); ?>
 
             <?php
+            $params = array(
+                    'posts_per_page' => 4,
+                    'post_type' => 'product'
+            );
 
-            $categories = get_the_category();
-
-            $rp_query = new WP_Query([
-                'posts_per_page' => 9,
-                'post__not_in' => [ $post->ID ],
-                'cat' => !empty($categories) ? $categories[0]->term_id : null
-            ]);
+            $wc_query = new WP_Query($params);
 
             ?>
 
-            <h1>sbrbbeberberb</h1>
-
-            <?php var_dump($rp_query);
+            <?php var_dump($wc_query);
                     die();?>
 
             <?php

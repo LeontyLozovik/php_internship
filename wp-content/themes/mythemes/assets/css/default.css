@@ -539,3 +539,8 @@ input{
 .phone_indent {
     margin-top: 8px;
 }
+
+.container_center{
+    display: flex;
+    justify-content: center;
+}

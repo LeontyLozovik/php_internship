@@ -15,9 +15,9 @@
  * @version 3.4.0
  */
 
-defined( 'ABSPATH' ) || exit;
+    defined( 'ABSPATH' ) || exit;
 
-get_header( 'shop' );
+    get_header();
 
 /**
  * Hook: woocommerce_before_main_content.
@@ -43,63 +43,158 @@ do_action( 'woocommerce_before_main_content' );
 	 */
 	do_action( 'woocommerce_archive_description' );
 	?>
+
+
 </header>
-<?php
-if ( woocommerce_product_loop() ) {
 
-	/**
-	 * Hook: woocommerce_before_shop_loop.
-	 *
-	 * @hooked woocommerce_output_all_notices - 10
-	 * @hooked woocommerce_result_count - 20
-	 * @hooked woocommerce_catalog_ordering - 30
-	 */
-	do_action( 'woocommerce_before_shop_loop' );
 
-	woocommerce_product_loop_start();
+<div class="container_media indent indent_both_sides">
+    <a href="#" class="img_social rpadding5">HOME</a>
+    <p class="rpadding5">/</p>
+    <a href="#" class="img_social rpadding5">SHOP</a>
+    <p class="rpadding5">/</p>
+    <p class="boldtext">FOR HIM</p>
+</div>
 
-	if ( wc_get_loop_prop( 'total' ) ) {
-		while ( have_posts() ) {
-			the_post();
+<div class="indent">
+    <h1 class="headers boldtext">MAN'S WATCHES</h1>
+</div>
 
-			/**
-			 * Hook: woocommerce_shop_loop.
-			 */
-			do_action( 'woocommerce_shop_loop' );
+<div class="container_media">
+    <div class="container_footer block_25">
+        <div class="container_footer fontcolor catalog_block">
+            <p class="boldtext fsize_up">BRENDS</p>
+            <div class="container_footer">
+                <label class="no_indent container_media">
+                    <div class="chbspan "></div>
+                    <div class="fsize_up">Cartier</div>
+                </label>
 
-			wc_get_template_part( 'content', 'product' );
-		}
-	}
+                <label class="no_indent">
+                    <input type="checkbox" name="Brends" class="check_box rmargin10">
+                    <span class="check_box_style"></span>
+                    <span class="fsize_up">Cartier</span>
+                </label>
+                <label class="no_indent">
+                    <input type="checkbox" name="Brends" class="rmargin10">
+                    <span class="fsize_up">Casio</span>
+                </label>
+                <label class="no_indent">
+                    <input type="checkbox" name="Brends" class="rmargin10">
+                    <span class="fsize_up">Gucci</span>
+                </label>
+                <label class="no_indent">
+                    <input type="checkbox" name="Brends" class="rmargin10">
+                    <span class="fsize_up">Sonata</span>
+                </label>
+                <label class="no_indent">
+                    <input type="checkbox" name="Brends" class="rmargin10">
+                    <span class="fsize_up">Tissot</span>
+                </label>
+                <label class="no_indent">
+                    <input type="checkbox" name="Brends" class="rmargin10">
+                    <span class="fsize_up">Tom Ford</span>
+                </label>
+            </div>
+        </div>
+        <div class="container_footer fontcolor catalog_block">
+            <p class="boldtext fsize_up">PRICE</p>
+            <input type="range" max="454" min="75">
+            <button class="filter_button btn btn-outline my-2 my-sm-10">Filter</button>
+        </div>
+        <div class="container_footer fontcolor catalog_block">
+            <p class="boldtext fsize_up">COLOR</p>
+            <div class="container_footer">
+                <label class="no_indent">
+                    <input type="checkbox" name="Color" class="rmargin10">
+                    <span class="fsize_up">black</span>
+                </label>
+                <label class="no_indent">
+                    <input type="checkbox" name="Color" class="rmargin10">
+                    <span class="fsize_up">blue</span>
+                </label>
+                <label class="no_indent">
+                    <input type="checkbox" name="Color" class="rmargin10">
+                    <span class="fsize_up">brown</span>
+                </label>
+                <label class="no_indent">
+                    <input type="checkbox" name="Color" class="rmargin10">
+                    <span class="fsize_up">gold</span>
+                </label>
+                <label class="no_indent">
+                    <input type="checkbox" name="Color" class="rmargin10">
+                    <span class="fsize_up">silver</span>
+                </label>
+            </div>
+        </div>
+        <div class="container_footer fontcolor catalog_block">
+            <div class="container_footer">
+                <p class="boldtext fsize_up">STRAP</p>
+                <label class="no_indent">
+                    <input type="checkbox" name="Strap" class="rmargin10">
+                    <span class="fsize_up">Aluminum</span>
+                </label>
+                <label class="no_indent">
+                    <input type="checkbox" name="Strap" class="rmargin10">
+                    <span class="fsize_up">Black Crocodile</span>
+                </label>
+                <label class="no_indent">
+                    <input type="checkbox" name="Strap" class="rmargin10">
+                    <span class="fsize_up">Brown Crocodile</span>
+                </label>
+                <label class="no_indent">
+                    <input type="checkbox" name="Strap" class="rmargin10">
+                    <span class="fsize_up">Calf Leather</span>
+                </label>
+            </div>
+        </div>
+    </div>
 
-	woocommerce_product_loop_end();
+    <div class="block_75">
+        <div class="container_catalog">
+            <?php
+            $params = array(
+                'posts_per_page' => 9,
+                'post_type' => 'product',
+                'paged' => get_query_var('paged')
+            );
+            $wc_query = new WP_Query($params);
 
-	/**
-	 * Hook: woocommerce_after_shop_loop.
-	 *
-	 * @hooked woocommerce_pagination - 10
-	 */
-	do_action( 'woocommerce_after_shop_loop' );
-} else {
-	/**
-	 * Hook: woocommerce_no_products_found.
-	 *
-	 * @hooked wc_no_products_found - 10
-	 */
-	do_action( 'woocommerce_no_products_found' );
-}
+            if($wc_query->have_posts()){
+                while ($wc_query->have_posts()){ ?>
+                    <div class="block_30 allborders">
+                        <?php $wc_query->the_post();?>
 
-/**
- * Hook: woocommerce_after_main_content.
- *
- * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
- */
-do_action( 'woocommerce_after_main_content' );
+                        <a href="<?php the_permalink();?>" class="menu1 dark container_footer">
+                            <?php
+                            $size = array(280, 370);
+                            the_post_thumbnail($size);
 
-/**
- * Hook: woocommerce_sidebar.
- *
- * @hooked woocommerce_get_sidebar - 10
- */
-do_action( 'woocommerce_sidebar' );
+                            $product_id = get_the_ID();
+                            $product = wc_get_product( $product_id );?>
 
-get_footer( 'shop' );
+                            <p class="center boldtext fsize_up"><?php the_title()?></p>
+                            <p class="center boldtext fsize_up"><?=$product->get_price_html(); ?></p>
+                        </a>
+                    </div>
+
+                <?php } ?>
+
+                <div class="container_reverse indent">
+                    <div class="container_for_her_and_him center block_75">
+                        <?  ?>
+                    </div>
+                </div>
+
+                <?php wp_reset_postdata();
+            }
+            else{
+                _e('No Products');
+            } ?>
+        </div>
+    </div>
+</div>
+
+
+
+    <?php get_footer(); ?>
