@@ -310,19 +310,19 @@ input{
 }
 
 .filter_button{
-    color : #242730;
-    background-color: #F7F7F7;
-    font-weight: 900;
-    border-radius: 0px;
-    border: 1px solid #242730;
+    color : #242730 !important;
+    background-color: #F7F7F7 !important;
+    font-weight: 900 !important;
+    border-radius: 0px !important;
+    border: 1px solid #242730 !important;
 }
 
 .filter_button:hover{
-    color : #F7F7F7;
-    background-color: #9B834D;
-    font-weight: 900;
-    border-radius: 0px;
-    border: 1px solid #9B834D;
+    color : #F7F7F7 !important;
+    background-color: #9B834D !important;
+    font-weight: 900 !important;
+    border-radius: 0px !important;
+    border: 1px solid #9B834D !important;
 }
 
 .catalog_block{
@@ -337,7 +337,7 @@ input{
 
 .page_button_pasive{
     color : #242730;
-    border: 1px solid #242730;
+    border: 1px solid #242730 !important;
     background-color: #FFFFFF;
     border-radius: 0px !important;
 

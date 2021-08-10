@@ -27,26 +27,12 @@ function my_setup_theme(){
     add_theme_support('post-thumbnails');
 }
 
-function my_page_link(){
-    global $wp_query, $wp_rewrite;
-    $wp_query->query_vars['paged'] > 1 ? $current = $wp_query->query_vars['paged'] : $current = 1;
+remove_action('woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
+remove_action('woocommerce_archive_description', 'woocommerce_taxonomy_archive_description', 10);
+remove_action('woocommerce_archive_description', 'woocommerce_product_archive_description', 20);
+remove_action('woocommerce_before_shop_loop','woocommerce_output_all_notices', 10);
+remove_action('woocommerce_before_shop_loop','woocommerce_result_count', 20);
+remove_action('woocommerce_before_shop_loop','woocommerce_catalog_ordering', 30);
+remove_action('woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
+remove_action('woocommerce_sidebar', 'woocommerce_get_sidebar', 10);
 
-    $pagination = array(
-        'base'         => @add_query_arg('page', '%#%'),
-        'format'       => '',
-        'total'        => $wp_query->max_num_pages,
-        'current'      => $current,
-        'show_all'     => true,
-        'type'         => 'plain',
-        'prev_text'    => __('Prev'),
-        'next_text'    => __('Next'),
-    );
-
-    if($wp_rewrite->using_permalinks())
-        $pagination['base'] = user_trailingslashit( trailingslashit( remove_query_arg( 's', get_pagenum_link( 1 ) ) ) );
-
-    if(!empty($wp_query->query_vars['s']))
-        $pagination['add_args'] = array( 's' => get_query_var( 's' ) );
-
-    echo woo_pagination($pagination);
-}

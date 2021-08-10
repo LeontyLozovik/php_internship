@@ -122,19 +122,19 @@
             </div>
             <div class="block_75 container_media m-auto menu_block">
                 <div>
-                    <a class="menu2 fsize_up" href="#">WOMAN</a>
+                    <a class="menu2 fsize_up" href="http://localhost/?post_type=product">WOMAN</a>
                 </div>
                 <div>
-                    <a class="menu2 fsize_up" href="#">MAN</a>
+                    <a class="menu2 fsize_up" href="http://localhost/?post_type=product">MAN</a>
                 </div>
                 <div>
-                    <a class="menu2 fsize_up" href="#">KIDS</a>
+                    <a class="menu2 fsize_up" href="http://localhost/?post_type=product">KIDS</a>
                 </div>
                 <div>
-                    <a class="menu2 fsize_up" href="#">BRENDS</a>
+                    <a class="menu2 fsize_up" href="http://localhost/?post_type=product">BRENDS</a>
                 </div>
                 <div>
-                    <a class="menu2 fsize_up" href="#">OFFERS</a>
+                    <a class="menu2 fsize_up" href="http://localhost/?post_type=product">OFFERS</a>
                 </div>
             </div>
             <div class="block_10 ml-auto lrborder">

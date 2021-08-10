@@ -114,7 +114,7 @@
         <div class="container_catalog">
             <?php
             $params = array(
-                'posts_per_page' => 12,
+                'posts_per_page' => 9,
                 'post_type' => 'product'
             );
             $wc_query = new WP_Query($params);
